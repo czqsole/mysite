@@ -13,7 +13,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# _file__获取settings.py的绝对路径，
+# os.path.dirname(path)返回path的目录，就是path的上一层
+# 所以BASE_DIR = <workspace>/mysite/
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATES_PATH = os.path.join(BASE_DIR, 'template')
 
 
 # Quick-start development settings - unsuitable for production
@@ -69,6 +73,9 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATES_DIRS = (
+    TEMPLATES_PATH,
+)
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
