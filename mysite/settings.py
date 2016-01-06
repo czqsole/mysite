@@ -74,6 +74,7 @@ TEMPLATES = [
 ]
 
 TEMPLATES_DIRS = (
+    
     TEMPLATES_PATH,
 )
 WSGI_APPLICATION = 'mysite.wsgi.application'
